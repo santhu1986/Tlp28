@@ -1,0 +1,66 @@
+package mvnpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Samplemvn {
+
+	public static void main(String[] args) 
+	{
+		String Expval="ranford Bank";
+		
+		//Launch firefox
+		
+		WebDriver driver=new FirefoxDriver();
+		
+		//URL
+		
+		driver.get("http://183.82.100.55/ranford2");
+
+		//Maximise
+		
+		driver.manage().window().maximize();
+		
+		String Actval=driver.findElement(By.xpath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[4]/p/span")).getText();
+		
+		System.out.println(driver.getTitle());
+		
+		//Comparision
+		
+		if (Expval.equals(Actval)) 
+		{
+		System.out.println("Ranford Application Launch");	
+		}
+		else
+		{
+			System.out.println("Ranford Application Not Launch");
+		}
+		
+		//Admin Login
+		
+		Expval="Welcome to Admin";
+		
+		driver.findElement(By.id("txtuId")).sendKeys("Admin");
+		driver.findElement(By.id("txtPword")).sendKeys("M1ndq");
+		driver.findElement(By.id("login")).click();
+		
+		
+		Actval=driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[4]/strong/font/font")).getText();
+		
+		//Comparision
+		
+				if (Expval.equalsIgnoreCase(Actval)) 
+				{
+				System.out.println("Admin Login Succ");	
+				}
+				else
+				{
+					System.out.println("Admin Login Failed");
+				}
+				
+		
+
+	}
+
+}

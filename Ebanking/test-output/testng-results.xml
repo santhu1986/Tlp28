@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="55867" started-at="2020-05-14T15:47:17 IST" finished-at="2020-05-14T15:48:13 IST">
+    <groups>
+    </groups>
+    <test name="on firefox" duration-ms="55867" started-at="2020-05-14T15:47:17 IST" finished-at="2020-05-14T15:48:13 IST">
+      <class name="com.ebanking.master.Sgrid">
+        <test-method status="PASS" signature="gd(java.lang.String)[pri:0, instance:com.ebanking.master.Sgrid@7b49cea0]" name="gd" duration-ms="55780" started-at="2020-05-14T15:47:17 IST" finished-at="2020-05-14T15:48:13 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gd -->
+      </class> <!-- com.ebanking.master.Sgrid -->
+    </test> <!-- on firefox -->
+  </suite> <!-- Suite -->
+</testng-results>
